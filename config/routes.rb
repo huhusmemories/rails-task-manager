@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Verb 'path', to: 'controller#action'
+  # Create
+  get '/tasks/new', to: 'tasks#new'
+  # Read
+  get '/tasks', to: 'tasks#index'
+  # Update
+  get '/tasks/:id', to: 'tasks#edit'
+  # Delete
+  delete '/tasks/:id', to: 'tasks#destroy'
 end
