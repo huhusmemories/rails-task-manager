@@ -1,5 +1,9 @@
 <h1>Index view</h1>
 <%# Iterate through all the tasks, so we can display one by one %>
-<% @tasks.each do |task| %>
-  <p><%= link_to task.title, task_path(task.id) %></p>
-<% end %>
+<ul>
+  <% @tasks.each do |task| %>
+    <p><%= link_to task.title, task_path(task.id) %></p>
+  <% end %>
+</ul>
+<br>
+<p><%= link_to "Add a new task", new_task_path %></p>
