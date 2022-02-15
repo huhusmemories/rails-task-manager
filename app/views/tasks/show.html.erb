@@ -1,2 +1,4 @@
-<h1>Show page</h1>
-<%= @task.title %>
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<%# Ternary operator to check if task is complete or not %>
+<p><%= @task.completed ? "This task is completed" : "This task is not completed yet" %>

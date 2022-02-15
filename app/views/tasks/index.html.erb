@@ -1,6 +1,5 @@
 <h1>Index view</h1>
+<%# Iterate through all the tasks, so we can display one by one %>
 <% @tasks.each do |task| %>
-  <h3><%=task.title%></h3>
-  <p><%= task.details %></p>
-  <p><%= task.completed %></p>
+  <p><%= link_to task.title, task_path(task.id) %></p>
 <% end %>
