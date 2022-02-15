@@ -36,6 +36,12 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def destroy
+    set_task
+    @task.destroy
+    redirect_to tasks_path
+  end
+
   private
 
   # by default rails prevent you from creating a new task, we need strong params
