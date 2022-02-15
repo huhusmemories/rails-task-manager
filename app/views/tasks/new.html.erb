@@ -1,15 +1,14 @@
 <h1>New Task View</h1>
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%# Don't need a checkbox here %>
-  <%# <%= f.check_box :completed%>
-  <%= f.submit %>
-<% end %>
+<%= render 'form'%>
+
+<%#= form_for(@task) do |f| %>
+  <%#= f.label :title %>
+  <%#= f.text_field :title %>
+  <%#= f.label :details %>
+  <%#= f.text_field :details %>
+  <%#= f.submit %>
+<%# end %>
 
 <%# <form action="create">
   <label for="task-name">Task</label>
